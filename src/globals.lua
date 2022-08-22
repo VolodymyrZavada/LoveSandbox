@@ -5,6 +5,7 @@ _LE = love.event
 _LT = love.touch
 _LI = love.image
 _LF = love.filesystem
+_LW = love.window
 
 windowW = _LG.getWidth()
 windowH = _LG.getHeight()

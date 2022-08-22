@@ -28,6 +28,16 @@ function love.update(dt)
     end
 end
 
+-- for test scene
+function love.keypressed(key)
+    if key == 'p' then
+        if scManager.currentScene.id == "game" then
+            scManager:unload(gameScenePath)
+            scManager:load(menuScenePath)
+        end
+    end
+end
+
 function love.handlers.buttonClicked(btnId)
     if btnId == "play" then
         scManager:unload(menuScenePath)

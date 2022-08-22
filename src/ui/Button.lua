@@ -114,6 +114,7 @@ function Button.update(self, dt)
         local isClick = _LM.isDown(1)
         if isClick and not self.isClicked then
             self.isClicked = true
+            -- push event to handlers array
             _LE.push("buttonClicked", self.id)
         end
     else
