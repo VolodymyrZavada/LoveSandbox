@@ -1,6 +1,7 @@
 -- global vars
 _LG = love.graphics
 _LM = love.mouse
+_LE = love.event
 _LT = love.touch
 _LI = love.image
 _LF = love.filesystem
@@ -33,6 +34,7 @@ progressFillColor = {.6, .9, .1, 1}
 defaultBGColor = {0, 0, 0, 0}
 loadingScreenBGColor = {.2, .1, .3, .7}
 menuScreenBGColor = {.7, .1, .3, .9}
+gameScreenBGColor = {.2, 0, .3, .9}
 -- end background colors
 
 -- start collision functions

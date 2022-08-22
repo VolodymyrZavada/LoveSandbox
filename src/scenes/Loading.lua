@@ -5,12 +5,11 @@ local progressBar
 
 function Loading.new(self)
     local bar = ProgressBar:new(windowW / 2, windowH - 150, windowW - 200, 30)
-    bar:setCornerRadius(5)
-    --bar:setTimer(5)
+    bar:setCornerRadius(10)
 
     local obj = {
         id = "loading",
-        timer = 3,
+        timer = 10,
         isLoading = true,
 
         -- inject ui module

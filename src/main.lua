@@ -4,6 +4,7 @@ local SceneManager = require "SceneManager"
 
 local loadingScenePath = "scenes/Loading"
 local menuScenePath = "scenes/Menu"
+local gameScenePath = "scenes/Game"
 
 local scManager
 
@@ -22,8 +23,18 @@ function love.update(dt)
     if scManager.currentScene.id == "loading" and not scManager.currentScene.isLoading then
         -- unlink prev scene
         scManager:unload(loadingScenePath)
-
         -- link and load new scene
         scManager:load(menuScenePath)
+    end
+end
+
+function love.handlers.buttonClicked(btnId)
+    if btnId == "play" then
+        scManager:unload(menuScenePath)
+        scManager:load(gameScenePath)
+    end
+
+    if btnId == "quit" then
+        _LE.push("quit")
     end
 end

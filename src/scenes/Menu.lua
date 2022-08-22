@@ -31,6 +31,7 @@ function Menu.new(self)
 end
 
 function Menu.draw(self)
+    _LG.setBackgroundColor(unpack(menuScreenBGColor))
     for k, button in pairs(self.buttons) do
         button:draw()
     end
