@@ -34,6 +34,8 @@ function SceneManager.unload(self, path)
     assert(_LF.getInfo(path .. ".lua") ~= nil, "SceneManager[path]: file not found.")
 
     if package.loaded[path] then
+        package.loaded[path] = nil
+
         self.previousScene = self.currentScene
         self.currentScene = nil
     end
