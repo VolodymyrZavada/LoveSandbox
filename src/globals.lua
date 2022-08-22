@@ -3,6 +3,7 @@ _LG = love.graphics
 _LM = love.mouse
 _LT = love.touch
 _LI = love.image
+_LF = love.filesystem
 
 windowW = _LG.getWidth()
 windowH = _LG.getHeight()
@@ -22,6 +23,12 @@ buttonHoverColor = {.9, 1, .1, 1}
 labelDefaultColor = {.7, .8, .2, .4}
 labelHoverColor = {.8, .4, .1, 1}
 -- end colors
+
+-- start background colors
+defaultBGColor = {0, 0, 0, 0}
+loadingScreenBGColor = {.2, .1, .3, .7}
+menuScreenBGColor = {.7, .1, .3, .9}
+-- end background colors
 
 -- start collision functions
 function checkPointToRectangle(pointX, pointY, recX, recY, recWidth, recHeight)
