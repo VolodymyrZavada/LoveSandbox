@@ -24,6 +24,11 @@ labelDefaultColor = {.7, .8, .2, .4}
 labelHoverColor = {.8, .4, .1, 1}
 -- end colors
 
+-- start progress bar colors
+progressBorderColor = {1, 1, .8, 1}
+progressFillColor = {.6, .9, .1, 1}
+-- end progress bar colors
+
 -- start background colors
 defaultBGColor = {0, 0, 0, 0}
 loadingScreenBGColor = {.2, .1, .3, .7}
