@@ -16,6 +16,7 @@ function Button.new(self, id, x, y, width, height)
         font = nil,
         cornerRadius = 0,
         isHovering = false,
+        isClicked = false,
         colors = {
             button = {
                 default = {},
@@ -107,8 +108,16 @@ function Button.update(self, dt)
     -- check mouse is overlapping rectangle
     if checkPointToRectangle(mouseX, mouseY, self.buttonX, self.buttonY, self.width, self.height) then
         self.isHovering = true
+
+        -- check left mouse button was clicked
+        -- @1 - primary(left) mouse button
+        local isClick = _LM.isDown(1)
+        if isClick and not self.isClicked then
+            self.isClicked = true
+        end
     else
         self.isHovering = false
+        self.isClicked = false
     end
 end
 

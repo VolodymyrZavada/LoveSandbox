@@ -2,8 +2,8 @@ require "globals"
 
 local Button = require "../ui/Button"
 
-local playButton = nil
-local quitButton = nil
+local playButton
+local quitButton
 
 function love.load()
     -- play button
@@ -15,7 +15,7 @@ function love.load()
     playButton:setHoverColor(buttonHoverColor, labelHoverColor)
 
     -- quit button
-    quitButton = Button:new("play", windowW / 2, 200, 200, 60)
+    quitButton = Button:new("quit", windowW / 2, 200, 200, 60)
     quitButton:setCornerRadius(15)
     quitButton:setLabel("QUIT", font45)
     quitButton:setLabelYCorrection(4)
@@ -26,9 +26,15 @@ end
 function love.draw()
     playButton:draw()
     quitButton:draw()
+
+    print("-------------------")
+    print(playButton.isClicked)
+    print(quitButton.isClicked)
+    print("-------------------")
 end
 
 function love.update(dt)
     playButton:update(dt)
     quitButton:update(dt)
+
 end
