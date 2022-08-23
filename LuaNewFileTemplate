@@ -4,7 +4,11 @@ File -> Preferences -> Editor -> File and Code templates -> Other -> Lua
 local ${NAME} = {}
 
 function ${NAME}.new(self)
-
+    local obj = {
+        id = "$NAME.toLowerCase()"
+    }
+    setmetatable(obj, { __index = ${NAME} })
+    return obj
 end
 
 function ${NAME}.draw(self)
