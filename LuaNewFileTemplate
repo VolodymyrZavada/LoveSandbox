@@ -1,0 +1,18 @@
+Lua Intellij Idea template
+File -> Preferences -> Editor -> File and Code templates -> Other -> Lua
+
+local ${NAME} = {}
+
+function ${NAME}.new(self)
+
+end
+
+function ${NAME}.draw(self)
+
+end
+
+function ${NAME}.update(self, dt)
+
+end
+
+return ${NAME}
